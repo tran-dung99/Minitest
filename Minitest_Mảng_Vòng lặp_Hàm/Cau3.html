@@ -5,6 +5,43 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    let length = +prompt("Nhập kích thước của mảng ")
+    let arrN = new Array(length)
+    for (let i = 0; i < arrN.length; i++) {
+        arrN[i] = +prompt("nhập phần tử thứ " + (i + 1) + " vào mảng")
+    }
 
+    function isPrime(number) {
+        let flag = true
+        if (number < 2) {
+            flag = false
+        } else if (number === 2) {
+            flag = true
+        } else {
+            for (let i = 2; i < number; i++) {
+                if (number % i === 0) {
+                    flag = false
+                    break;
+                }
+            }
+        }
+        return flag
+    }
+
+    function sum(arr) {
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (isPrime(arr[i]) === true) {
+                sum += arr[i]
+            }
+        }
+        return sum
+    }
+
+    let result = sum(arrN);
+    alert("Tổng các số nguyên tố trong mảng là " + result)
+
+</script>
 </body>
 </html>

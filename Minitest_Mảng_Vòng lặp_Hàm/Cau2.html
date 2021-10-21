@@ -5,6 +5,29 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    let length = +prompt("Nhập kích thước  của mảng ")
+    let arrN = new Array(length)
+    for (let i = 0; i < arrN.length; i++) {
+        arrN[i] = prompt("nhập phần tử thứ " + (i + 1) + " vào mảng")
+    }
+    let input = prompt("Nhập phần tử a ")
 
+    function dem(arr, element) {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if ((arr[i]) === element) {
+                count += 1
+            }
+        }
+        if (count !== 0) {
+            alert("có" + count + " phần tử " +'"'+element + '"' + " trong mảng")
+        } else {
+            alert("không có phần tử " +'"'+element + '"' + " trong mảng")
+        }
+    }
+
+    dem(arrN, input)
+</script>
 </body>
 </html>

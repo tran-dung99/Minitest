@@ -5,6 +5,33 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    function isPrime(number) {
+        let flag = true
+        if (number < 2) {
+            flag = false
+        } else if (number === 2) {
+            flag = true
+        } else {
+            for (let i = 2; i < number; i++) {
+                if (number % i === 0) {
+                    flag = false
+                    break;
+                }
+            }
+        }
+        return flag
+    }
 
+    let snt = 0;
+    let sum = 0;
+    while (snt < 500) {
+        if (isPrime(snt) === true) {
+            sum += snt
+        }
+        snt++
+    }
+    alert("Tổng các số nguyên tố nhỏ hơn 500 là " + sum)
+</script>
 </body>
 </html>
