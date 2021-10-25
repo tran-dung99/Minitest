@@ -20,8 +20,8 @@
         } else if (number === 2) {
             flag = true
         } else {
-            for (let i = 2; i < number ; i++) {
-                if(number % i === 0) {
+            for (let i = 2; i < number; i++) {
+                if (number % i === 0) {
                     flag = false
                     break;
                 }
@@ -29,16 +29,17 @@
         }
         return flag
     }
-  function start() {
-      let result = parseInt(document.getElementById('input').value);
-      let mang =[]
-       for(let i = 1; i <= result; i++) {
-        if(isPrime(i) == true) {
-          mang.push(i)
+
+    function start() {
+        let result = parseInt(document.getElementById('input').value);
+        let mang = []
+        for (let i = 1; i <= result; i++) {
+            if (isPrime(i) == true) {
+                mang.push(i)
+            }
         }
+        document.getElementById('ketQua').innerHTML = mang
     }
-      document.getElementById('ketQua').innerHTML = mang
-  }
 </script>
 </body>
 </html>
